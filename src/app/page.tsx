@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { BalanceActions } from "@/components/balance-actions"
+import { Button } from "@/components/ui/button"
 import { ArrowUpCircle, PlusCircle } from "lucide-react"
 
 /**
@@ -39,7 +39,17 @@ export default function Home() {
       <section className="space-y-4">
         <h2 className="text-sm font-medium text-muted-foreground">Total balance</h2>
         <p className="text-3xl font-bold tracking-tight">1.00 EUR</p>
-        <BalanceActions />
+        <div className="flex flex-wrap gap-2">
+          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            Send
+          </Button>
+          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            Add money
+          </Button>
+          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            Request
+          </Button>
+        </div>
       </section>
 
       {/* Currency account cards */}
